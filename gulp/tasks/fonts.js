@@ -18,6 +18,23 @@ export const otfToTtf = () => {
 		// Выгружаем в исходную папку
 		.pipe(app.gulp.dest(`${app.path.srcFolder}/fonts/`))
 }
+
+export const eotToTtf = () => {
+	// Ищем файлы шрифтов .eot
+	return app.gulp.src(`${app.path.srcFolder}/fonts/*.eot`, {})
+		.pipe(app.plugins.plumber(
+			app.plugins.notify.onError({
+				title: "FONTS",
+				message: "Error: <%= error.message %>"
+			}))
+		)
+		// Конвертируем в .ttf
+		.pipe(fonter({
+			formats: ['ttf']
+		}))
+		// Выгружаем в исходную папку
+		.pipe(app.gulp.dest(`${app.path.srcFolder}/fonts/`))
+}
 export const ttfToWoff = () => {
 	// Ищем файлы шрифтов .ttf
 	return app.gulp.src(`${app.path.srcFolder}/fonts/*.ttf`, {})

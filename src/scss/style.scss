@@ -8,28 +8,32 @@
   }
 }
 
-$main: #0b011d;
+$main: #7f7f7f;
+$beige: #ffffef;
+$green: #6fb629;
+$orange: #ffa323;
+$brown: #70544f;
 
 @import "fonts";
 
 @import "normalize";
 
 body {
-  font-family: "TT Norms";
+  font-family: "__Circe_5";
 }
 .page {
   color: $main;
-  background-color: white;
+  background-color: $beige;
   overflow: hidden;
 
   &__container {
     margin: 0 auto;
-    max-width: 1718px;
+    max-width: 1215px;
     &_short {
       max-width: 1434px;
     }
 
-    @media (max-width: 1750px) {
+    /* @media (max-width: 1750px) {
       padding: 0 100px;
     }
 
@@ -39,14 +43,16 @@ body {
 
     @media (max-width: 767px) {
       padding: 0 15px;
-    }
+    } */
   }
 
   &__title {
+    color: #6c3e2a;
+    line-height: 36px;
+    font-family: "__Circe Bold_5";
     font-weight: 700;
-    font-size: 54px;
-    line-height: 140%;
-    color: #fff;
+    font-size: 30px;
+    margin-bottom: 50px;
   }
 }
 
@@ -68,33 +74,17 @@ body {
 /* Баннер */
 @import "banner";
 
-/* Задачи */
-@import "tasks";
+/* Категории */
+@import "categories";
 
-/* Как мы это делаем? */
-@import "doit";
+/* Каталог */
+@import "product";
 
-/* Цены */
-@import "prices";
+/* Карточки */
+@import "cards";
 
-/* Кейсы */
-@import "cases";
-
-/* Нам есть чем гордиться */
-@import "pride";
-
-/* Достижения */
-@import "achievements";
-
-/* Форма */
-@import "form";
+/* Корзина */
+@import "cart";
 
 /* Подвал */
 @import "footer";
-
-//Панель мобилка
-@import "panel";
-
-
-//Анимации
-@import "aos";

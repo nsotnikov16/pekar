@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Мамин-пекарь</title>
+</head>
+
+<body>
+	<div class="page">
+		<!-- Шапка -->
+		<div class="header">
+    <div class="page__container">
+        <button class="header__burger">
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <span>Меню</span>
+        </button>
+        <div class="header__block">
+            <p>Сургут, ул. Есенина 4</p>
+            <p>Работаем с 10:00 до 21:00</p>
+        </div>
+        <a class="logo header__logo"></a>
+        <div class="header__block">
+            <a href="tel:+79129320030">8 (912) 932-00-30</a>
+            <p>Доставка с 10:00 до 22:00</p>
+        </div>
+        <button class="header__cart"></button>
+        <div class="header__products">
+            <ul>
+                <li><a href="#"><img src="./img/pirogi.svg">Пироги</a></li>
+                <li><a href="#"><img src="./img/pizza.svg">Пицца</a></li>
+                <li><a href="#"><img src="./img/vipechka.svg">Выпечка</a></li>
+                <li><a href="#"><img src="./img/kombo.svg">Комбо наборы</a></li>
+                <li><a href="#"><img src="./img/polufabrikati.svg">Полуфабрикаты</a></li>
+                <li><a href="#"><img src="./img/napitki.svg">Напитки</a></li>
+                <!-- <li><a href="#"><img src="./img/napitki.svg">Морсы</a></li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="header__mobile"></div>
+</div>
+		<!-- Баннер -->
+		<div class="banner" style="background-image: url(./img/fon1.jpg)">
+    <div class="page__container">
+        <h1 class="banner__title">Доставка вкусных<br>
+            пирогов и выпечки<br>
+            в Сургуте</h1>
+        <ul class="banner__advantages">
+            <li>
+                <div style="background-image: url(./img/delivery-man.svg);"></div>
+                <p>Среднее время
+                    доставки 1,5 часа</p>
+            </li>
+            <li>
+                <div style="background-image: url(./img/book.svg);"></div>
+                <p>Оригинальная рецептура</p>
+            </li>
+            <li>
+                <div style="background-image: url(./img/percentage.svg);"></div>
+                <p>Скидки постоянным клиентам</p>
+            </li>
+        </ul>
+
+        <button class="btn banner__btn">Выбрать пирог</button>
+    </div>
+</div>
+		<!-- Пироги -->
+		<section class="section">
+    <div class="page__container">
+        
+        <ul class="categories">
+            <li style="background-image: url(./img/fon3.jpg);">
+                <h2>Сытные пироги</h2>
+                <a class="btn">Выбрать</a>
+            </li>
+            <li style="background-image: url(./img/fon4.jpg);">
+                <h2>Сладкие пироги</h2>
+                <a class="btn">Выбрать</a>
+            </li>
+        </ul>
+    </div>
+</section>
+		<!-- Вкусные новинки -->
+		<section class="section">
+    <div class="page__container">
+        <h3 class="section__title section__title_line">Вкусные новинки</h3>
+        <ul class="products">
+            <li class="product">
+                <div class="product__top">
+                    <a class="product__img" href="#">
+                        <img src="./img/pirog1.jpg">
+                    </a>
+                    <a href="#" class="product__title">Пирог жульен 1 кг</a>
+                    <p class="product__structure"><span class="brown">Состав: </span>Курица, шампиньоны, сыр, лук, соус,
+                        зелень</p>
+                </div>
+                <div class="product__bottom">
+                    <div class="product__row">
+                        <p>Выберите тип теста</p>
+                        <div class="product__choose">
+                            <input id="testo-1" type="radio" name="testo" value="1" checked>
+                            <label for="testo-1">Дрожжевое</label>
+                            <input id="testo-2" type="radio" name="testo" value="2">
+                            <label for="testo-2">Песочное</label>
+                            <input id="testo-3" type="radio" name="testo" value="3">
+                            <label for="testo-3">Слоёное</label>
+                            <input id="testo-4" type="radio" name="testo" value="4">
+                            <label for="testo-4">Слоёное</label>
+                            <input id="testo-5" type="radio" name="testo" value="5">
+                            <label for="testo-5">Песочное</label>
+                            <input id="testo-6" type="radio" name="testo" value="6">
+                            <label for="testo-6">Дрожжевое</label>
+                        </div>
+                    </div>
+                    <div class="product__row">
+                        <p>Выберите вес</p>
+                        <div class="product__choose">
+                            <input id="ves-1" type="radio" name="ves" value="1" checked>
+                            <label for="ves-1">1.0 кг</label>
+                            <input id="ves-2" type="radio" name="ves" value="1.5">
+                            <label for="ves-2">1.5 кг</label>
+                            <input id="ves-3" type="radio" name="ves" value="2">
+                            <label for="ves-3">2.0 кг</label>
+                            <input id="ves-4" type="radio" name="ves" value="2.5">
+                            <label for="ves-4">2.5 кг</label>
+                        </div>
+                    </div>
+                    <div class="product__price">
+                        Цена: <span class="price">650 <small>₽</small></span><span class="price price_old">850
+                            <small>₽</small></span>
+                    </div>
+                    <div class="product__btns">
+                        <button class="btn btn_add">Добавить в корзину</button>
+                    </div>
+
+                </div>
+
+            </li>
+
+            <li class="product">
+                <div class="product__top">
+                    <a class="product__img" href="#">
+                        <img src="./img/pirog1.jpg">
+                    </a>
+                    <a href="#" class="product__title">Пирог жульен 1 кг</a>
+                    <p class="product__structure"><span class="brown">Состав: </span>Курица, шампиньоны, сыр, лук, соус,
+                        зелень</p>
+                </div>
+                <div class="product__bottom">
+                    <div class="product__row">
+                        <p>Выберите тип теста</p>
+                        <div class="product__choose">
+                            <input id="testo-1" type="radio" name="testo" value="1" checked>
+                            <label for="testo-1">Дрожжевое</label>
+                            <input id="testo-2" type="radio" name="testo" value="2">
+                            <label for="testo-2">Песочное</label>
+                            <input id="testo-3" type="radio" name="testo" value="3">
+                            <label for="testo-3">Слоёное</label>
+                            <input id="testo-4" type="radio" name="testo" value="4">
+                            <label for="testo-4">Слоёное</label>
+                            <input id="testo-5" type="radio" name="testo" value="5">
+                            <label for="testo-5">Песочное</label>
+                            <input id="testo-6" type="radio" name="testo" value="6">
+                            <label for="testo-6">Дрожжевое</label>
+                        </div>
+                    </div>
+                    <div class="product__row">
+                        <p>Выберите вес</p>
+                        <div class="product__choose">
+                            <input id="ves-1" type="radio" name="ves" value="1" checked>
+                            <label for="ves-1">1.0 кг</label>
+                            <input id="ves-2" type="radio" name="ves" value="1.5">
+                            <label for="ves-2">1.5 кг</label>
+                            <input id="ves-3" type="radio" name="ves" value="2">
+                            <label for="ves-3">2.0 кг</label>
+                            <input id="ves-4" type="radio" name="ves" value="2.5">
+                            <label for="ves-4">2.5 кг</label>
+                        </div>
+                    </div>
+                    <div class="product__price">
+                        Цена: <span class="price">650 <small>₽</small></span><span class="price price_old">850
+                            <small>₽</small></span>
+                    </div>
+                    <div class="product__btns">
+                        <button class="btn btn_add">Добавить в корзину</button>
+                    </div>
+
+                </div>
+
+            </li>
+
+            <li class="product">
+                <div class="product__top">
+                    <a class="product__img" href="#">
+                        <img src="./img/pirog1.jpg">
+                    </a>
+                    <a href="#" class="product__title">Пирог жульен 1 кг</a>
+                    <p class="product__structure"><span class="brown">Состав: </span>Курица, шампиньоны, сыр, лук, соус,
+                        зелень</p>
+                </div>
+                <div class="product__bottom">
+                    <div class="product__row">
+                        <p>Выберите тип теста</p>
+                        <div class="product__choose">
+                            <input id="testo-1" type="radio" name="testo" value="1" checked>
+                            <label for="testo-1">Дрожжевое</label>
+                            <input id="testo-2" type="radio" name="testo" value="2">
+                            <label for="testo-2">Песочное</label>
+                            <input id="testo-3" type="radio" name="testo" value="3">
+                            <label for="testo-3">Слоёное</label>
+                            <input id="testo-4" type="radio" name="testo" value="4">
+                            <label for="testo-4">Слоёное</label>
+                            <input id="testo-5" type="radio" name="testo" value="5">
+                            <label for="testo-5">Песочное</label>
+                            <input id="testo-6" type="radio" name="testo" value="6">
+                            <label for="testo-6">Дрожжевое</label>
+                        </div>
+                    </div>
+                    <div class="product__row">
+                        <p>Выберите вес</p>
+                        <div class="product__choose">
+                            <input id="ves-1" type="radio" name="ves" value="1" checked>
+                            <label for="ves-1">1.0 кг</label>
+                            <input id="ves-2" type="radio" name="ves" value="1.5">
+                            <label for="ves-2">1.5 кг</label>
+                            <input id="ves-3" type="radio" name="ves" value="2">
+                            <label for="ves-3">2.0 кг</label>
+                            <input id="ves-4" type="radio" name="ves" value="2.5">
+                            <label for="ves-4">2.5 кг</label>
+                        </div>
+                    </div>
+                    <div class="product__price">
+                        Цена: <span class="price">650 <small>₽</small></span><span class="price price_old">850
+                            <small>₽</small></span>
+                    </div>
+                    <div class="product__btns">
+                        <button class="btn btn_add">Добавить в корзину</button>
+                    </div>
+
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</section>
+		<!-- Почему мы? -->
+		<section class="section">
+    <div class="page__container">
+        <h3 class="section__title section__title_line">Почему мы?</h3>
+        <ul class="cards">
+            <li class="card">
+                <div class="card__img" style="background-image: url(./img/chef.svg)"></div>
+                <div class="card__content">
+                    <h3 class="card__title">Опытные повара</h3>
+                    <p class="card__subtitle">Специально обученные повара готовят одинаково вкусные блюда от заказа до заказа
+                    </p>
+                </div>
+            </li>
+            <li class="card">
+                <div class="card__img" style="background-image: url(./img/hot.svg)"></div>
+                <div class="card__content">
+                    <h3 class="card__title">Теплая еда
+                    </h3>
+                    <p class="card__subtitle">Ваша еда не успеет остыть, мы используем новейшие технологии доставки блюд
+                    </p>
+                </div>
+            </li>
+            <li class="card">
+                <div class="card__img" style="background-image: url(./img/restaurant.svg)"></div>
+                <div class="card__content">
+                    <h3 class="card__title">Свежие продукты</h3>
+                    <p class="card__subtitle">Наши специалисты закупают продукты только у проверенных поставщиков
+                    </p>
+                </div>
+            </li>
+            <li class="card">
+                <div class="card__img" style="background-image: url(./img/apple.svg)"></div>
+                <div class="card__content">
+                    <h3 class="card__title">Свежие продукты</h3>
+                    <p class="card__subtitle">Наши специалисты закупают продукты только у проверенных поставщиков</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+		<!-- Баннер нижний -->
+		<section class="section">
+    <div class="banner banner_bottom" style="background-image: url(./img/fon2.jpg)">
+        <div class="page__container">
+            <h1 class="banner__title">Закажите вкусный<br> пирог с быстрой<br> доставкой до двери
+                <button class="btn banner__btn">Выбрать пирог</button>
+        </div>
+    </div>
+</section>
+		<!-- Подвал -->
+		<div class="footer">
+    <div class="footer__top">
+        <div class="page__container ">
+            <div class="footer__block">
+                <h3>Каталог</h3>
+                <nav>
+                    <a href="#">Пироги</a><a href="#">Комбо наборы</a><a href="#">Пицца</a><a
+                        href="#">Полуфабрикаты</a><a href="#">Выпечка</a><a href="#">Напитки</a>
+                </nav>
+            </div>
+            <div class="footer__block">
+                <h3>Навигация</h3>
+                <nav>
+                    <a href="#">Главная</a><a href="#">Доставка</a><a href="#">Акции / Скидки</a><a
+                        href="#">Контакты</a><a href="#">О нас</a>
+                </nav>
+            </div>
+            <div class="footer__block">
+                <h3>Доставка</h3>
+                <a href="tel:+79129320030" class="footer__info footer__info_phone">8 (912) 932-00-30
+                </a>
+                <a class="footer__info footer__info_delivery">Условия доставки</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer__center">
+        <div class="page__container">
+            <a class="logo footer__logo"></a>
+            <div class="footer__pay">
+                <p>Способы оплаты:</p>
+                <div class="pay-images">
+                    <img src="./img/cards-pay.svg" style="max-width: 205px;"><img
+                        src="./img/google-pay-primary-logo.svg" style="max-width: 61px;">
+                    <img src="./img/apple-pay-payment-mark2.svg" style="max-width: 61px;">
+                </div>
+
+            </div>
+            <div class="footer__socials">
+                <p>Давайте дружить:</p>
+                <div class="socials">
+                    <a href="#" target="_blank" class="socials__inst"></a>
+                    <a href="#" target="_blank" class="socials__vk"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="page__container">
+            <div class="copyright"><span class="orange uppercase">МАМИН ПЕКАРЬ</span> - доставка пирогов в Сургуте</div>
+            <a href="#" class="politics">Политика конфиденциальности</a>
+            <a href="https://a1-reklama.ru" class="dev">Разработка сайта <span class="orange">A1 Интернет-эксперт</span></a>
+        </div>
+    </div>
+
+</div>
+
+	</div>
+
+	<!-- Модалки -->
+	
+
+	
+<script src="./js/app.js"></script>
+</body>
+
+</html>

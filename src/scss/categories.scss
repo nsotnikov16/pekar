@@ -1,0 +1,51 @@
+.categories {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: space-between;
+
+    li {
+        height: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 10px;
+        padding-left: 65px;
+        padding-top: 54px;
+        padding-bottom: 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            display: block;
+            background: linear-gradient(to right, rgba(108, 62, 42, 0.56), rgba(112, 84, 79, 0) 100%);
+            z-index: 0;
+        }
+        > * {
+            position: relative;
+            z-index: 10;
+        }
+
+    
+    }
+
+    h2 {
+        font-size: 72px;
+        line-height: 72px;
+        color: white;
+        font-family: "__Circle_5";
+        max-width: 40%;
+    }
+
+    .btn {
+        width: 136px;
+    }
+}

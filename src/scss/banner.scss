@@ -1,0 +1,77 @@
+.banner {
+    min-height: 750px;
+    max-height: 800px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 20;
+
+    &_bottom {
+        min-height: 530px;
+        margin-bottom: -60px;
+        .banner__btn {
+            margin-top: 50px;
+        }
+        background-position: bottom;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        display: block;
+        background: linear-gradient(to right, rgba(108, 62, 42, 0.56), rgba(112, 84, 79, 0) 100%);
+    }
+
+    .page__container {
+        width: 100%;
+        z-index: 20;
+    }
+
+    &__title {
+        font-size: 60px;
+        font-weight: 800;
+        line-height: 60px;
+        color: white;
+        font-family: "__Circle_5";
+        max-width: 655px;
+        margin-bottom: 70px;
+    }
+
+    &__advantages {
+        margin-bottom: 70px;
+        display: flex;
+        align-items: center;
+        max-width: 740px;
+        li {
+            margin-right: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        div {
+            margin-right: 12px;
+            background-color: $orange;
+            background-size: 47%;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            width: 54px;
+            height: 54px;
+            flex-shrink: 0;
+        }
+
+        p {
+            color: white;
+        }
+    }
+
+    &__btn {
+        min-width: 248px;
+    }
+}

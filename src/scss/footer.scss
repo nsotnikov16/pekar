@@ -1,70 +1,198 @@
 .footer {
-    padding: 92px 0 79px;
+    padding-top: 105px;
+    background-image: url(../img/bg-footer.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center top;
+    z-index: 20;
+    position: relative;
 
-    @media (max-width: 1024px) {
-        padding: 60px 0 115px;
+    &__top, &__center {
+        background-color: #faf0d7;
+    }
+    &__top {
+        .page__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10%;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #ede3cb;
+        }
     }
 
-    &__container {
-        display: flex;
-        justify-content: space-between;
+    &__block {
+        > *:first-child {
+            color: #6c3e2a;
+            line-height: 24px;
+            font-family: "__Montserrat_5";
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    }
 
-        @media (max-width: 1024px) {
-            flex-direction: column;
-            > * {
-                margin-bottom: 35px;
-                &:last-child {
-                    margin-bottom: 0;
-                }
+    nav {
+        min-width: 380px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        a {
+            &:hover {
+                text-decoration: underline;
+                opacity: 0.8;
             }
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        &a {
+            &:hover {
+                text-decoration: underline;
+                opacity: 0.8;
+            }
+        }
+
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+
+        &::before {
+            content: "";
+            background-size: 14px 14px;
+            width: 26px;
+            height: 26px;
+            display: block;
+            border-radius: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            flex-shrink: 0;
+            background-color: $orange;
+            margin-right: 10px;
+        }
+        &_phone {
+            &::before {
+                background-image: url(../img/call.svg);
+            }
+            color: $brown;
+            font-family: "__Circe Bold_5";
+            font-weight: 700;
+        }
+
+        &_delivery {
+            &::before {
+                background-image: url(../img/delivery.svg);
+                background-position: center 8px;
+            }
+        }
+    }
+
+    &__center {
+        padding: 40px 0;
+
+        .page__container {
+            display: grid;
+            grid-template-columns: repeat(3, max-content);
+            justify-content: space-between;
+            align-items: center;
         }
     }
 
     &__logo {
-        width: 386px;
+        width: 105px;
+        height: 65px;
+    }
+
+    &__pay {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        p {
+            margin-right: 20px;
+            white-space: nowrap;
+        }
         img {
             width: 100%;
         }
+    }
 
-        @media (max-width: 820px) {
-            width: 345px;
+    &__socials {
+        display: flex;
+        align-items: center;
+        p {
+            margin-right: 10px;
         }
     }
 
-    &__menu {
-        display: flex;
-        flex-direction: column;
+    &__bottom {
+        .page__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        background-color: #70544F;
+        color: white;
+        padding: 20px 0;
+
+
+        .copyright, .politics, .dev {
+            font-size: 14px;
+        }
+
         a {
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 21px;
-            margin-bottom: 30px;
-            &:last-child {
-                margin-bottom: 0;
+            color: white;
+        }
+
+        .politics {
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+                color: $orange
             }
         }
     }
-
-    &__contacts {
-        display: flex;
-        flex-direction: column;
-        > * {
-            margin-bottom: 13px;
-            &:last-child {
-                margin-bottom: 0;
-            }
+}
+.page {
+    &__container {
+    }
+}
+.logo {
+}
+.pay-images {
+    max-height: 57px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    img {
+        margin-right: 10px;
+    }
+}
+.socials {
+    display: flex;
+    align-items: center;
+    a {
+        width: 30px;
+        height: 30px;
+        display: block;
+        background-size: 30px 30px;
+        &:hover {
+            opacity: 0.8;
+        }
+        margin-right: 12px;
+        &:last-child {
+            margin-right: 0;
         }
     }
-
-    &__phone {
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
+    &__inst {
+        background-image: url(../img/instagram.svg);
+        
     }
 
-    &__email {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 21px;
+    &__vk {
+        background-image: url(../img/vk.svg);
     }
 }
