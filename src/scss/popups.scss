@@ -29,19 +29,13 @@
   &__close {
     position: absolute;
     top: -35px;
+    cursor: pointer;
     right: -35px;
     font-size: 30px;
     color: $orange;
     background-color: transparent !important;
     span {
       color: $orange;
-    }
-
-
-    @media (max-width: 767px) {
-      top: -10px;
-      right: -5px;
-      font-size: 20px;
     }
   }
 
@@ -64,6 +58,26 @@
     .popup__close {
       top: 45px;
       right: 35px;
+      @media (max-width: 580px) {
+        top: 25px;
+        right: 20px;
+      }
+    }
+  }
+
+  &#header-mobile {
+    .popup__close {
+      top: -5px;
+      right: 25px;
+      font-size: 15px;
+      border-radius: 50%;
+      border: 1px solid $orange;
+      background: #f9f1d7 !important;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }

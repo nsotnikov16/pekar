@@ -23,20 +23,17 @@ if (!sensor) {
     headerContainer.addEventListener('mouseleave', () => header.classList.remove('open-menu'))
 } else {
     burger.addEventListener('click', () => header.classList.toggle('open-menu'))
+    if(window.innerWidth <= 820) burger.dataset.pointer = 'header-mobile'
     document.addEventListener('click', ({ target }) => !headerContainer.contains(target) ? header.classList.remove('open-menu') : '')
 }
 
 // Баннер параллакс
 const banner = document.querySelector('.banner')
 if (banner) {
-
     document.addEventListener('scroll', (e) => {
         const scrollPosition = document.documentElement.scrollTop
-
         banner.style.backgroundPositionY = `calc(50% + ${scrollPosition}px)`
         scrollPosition == 0 ? banner.style.backgroundPositionY = 'center' : ''
-
-
     })
 }
 
