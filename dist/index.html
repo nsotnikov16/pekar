@@ -25,12 +25,12 @@
             <p>Сургут, ул. Есенина 4</p>
             <p>Работаем с 10:00 до 21:00</p>
         </div>
-        <a class="logo header__logo"></a>
+        <a href="./index.html" class="logo header__logo"></a>
         <div class="header__block">
             <a href="tel:+79129320030">8 (912) 932-00-30</a>
             <p>Доставка с 10:00 до 22:00</p>
         </div>
-        <button class="header__cart"></button>
+        <button data-pointer="cart" class="header__cart"></button>
         <div class="header__products">
             <ul>
                 <li><a href="#"><img src="./img/pirogi.svg">Пироги</a></li>
@@ -358,45 +358,176 @@
 	</div>
 
 	<!-- Модалки -->
-	<div class="popup popup_opened" id="cart">
+	<div class="popup" id="cart">
     <div class="popup__container">
         <div class="popup__content">
             <div class="cart">
-                <h3 class="cart__title">Проверьте ваш заказ</h3>
-                <ul class="cart__list">
-                    <li class="top">
-                        <div>Арт.</div>
-                        <div>Наименование</div>
-                        <div>Кол-во</div>
-                        <div>Цена, руб.</div>
-                        <div>Итого, руб</div>
-                        <div></div>
-                    </li>
-                    <li>
-                        <div>vi13</div>
-                        <div>Сосиска в тесте</div>
-                        <div>4</div>
-                        <div>60.00</div>
-                        <div>240.00</div>
-                        <div>
-                            <button class="plus">+</button>
-                            <button class="minus">-</button>
-                            <button class="remove">x</button>
+                <div class="cart__step1" style="display: none">
+                    <h3 class="cart__title">Проверьте ваш заказ</h3>
+                    <ul class="cart__list top">
+                        <li>
+                            <div>Арт.</div>
+                            <div>Наименование</div>
+                            <div>Кол-во</div>
+                            <div>Цена, руб.</div>
+                            <div>Итого, руб</div>
+                            <div></div>
+                        </li>
+                    </ul>
+                    <ul class="cart__list">
+                        <li>
+                            <div>vi13</div>
+                            <div>Сосиска в тесте</div>
+                            <div>4</div>
+                            <div>60.00</div>
+                            <div>240.00</div>
+                            <div>
+                                <button class="plus">+</button>
+                                <button class="minus">-</button>
+                                <button class="remove">x</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div>vi132</div>
+                            <div>Сосиска в тесте 124 124124</div>
+                            <div>4</div>
+                            <div>60.00</div>
+                            <div>240.00</div>
+                            <div>
+                                <button class="plus">+</button>
+                                <button class="minus">-</button>
+                                <button class="remove">x</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div>vi132</div>
+                            <div>Сосиска в тесте 124 124124</div>
+                            <div>4</div>
+                            <div>60.00</div>
+                            <div>240.00</div>
+                            <div>
+                                <button class="plus">+</button>
+                                <button class="minus">-</button>
+                                <button class="remove">x</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div>vi132</div>
+                            <div>Сосиска в тесте 124 124124</div>
+                            <div>4</div>
+                            <div>60.00</div>
+                            <div>240.00</div>
+                            <div>
+                                <button class="plus">+</button>
+                                <button class="minus">-</button>
+                                <button class="remove">x</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div>vi132</div>
+                            <div>Сосиска в тесте 124 124124</div>
+                            <div>4</div>
+                            <div>60.00</div>
+                            <div>240.00</div>
+                            <div>
+                                <button class="plus">+</button>
+                                <button class="minus">-</button>
+                                <button class="remove">x</button>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <p class="cart__text">
+                        Приём заказов осуществляется на текущий день до 20:00<br>Заказ от 2000 руб.:
+                        бесплатно.<br>Стоимость
+                        доставки до 2000 руб.:<br>Ж/Д 100 руб., центр 150 руб., 25мкр 200 руб.
+                    </p>
+
+                    <div class="cart__step1-btns">
+                        <div class="btn cart__btn-price">К оплате: 425.00 ₽</div>
+                        <button class="btn">Оформить заказ</button>
+                    </div>
+
+                    <a class="cart__conditions" href="#">Ознакомьтесь с условиями доставки</a>
+                </div>
+                <div class="cart__step2">
+                    <h3 class="cart__title">Заполните данные для доставки</h3>
+                    <form class="form cart__form" action="#">
+                        <div class="rows">
+                            <div class="row">
+                                <label for="name">Ваше имя:</label>
+                                <div class="row__input">
+                                    <input id="name" type="text" autocomplete="off" placeholder=" ">
+                                    <span>Укажите ваше имя</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label for="phone">Телефон:</label>
+                                <div class="row__input">
+                                    <input id="phone" class="tel" type="text" autocomplete="off" placeholder=" ">
+                                    <span>+7 (___) ___-__-__</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label for="address">Адрес доставки / Самовывоз</label>
+                                <div class="row__input">
+                                    <input id="address" type="text" autocomplete="off" placeholder=" ">
+                                    <span>Куда привезти / Заберу сам(а)</span>
+                                </div>
+                            </div>
+                            <div class="row row_col2">
+                                <label for="time">Время доставки:</label>
+                                <div class="row__input">
+                                    <input id="time" type="text" autocomplete="off" placeholder=" ">
+                                    <span>Своё время</span>
+                                </div>
+                                <div class="row__checkbox">
+                                    <input id="bliz" type="checkbox" name="bliz">
+                                    <label for="bliz">Ближайшее</label>
+                                </div>
+                            </div>
+                            <div class="row row_col2">
+                                <label for="">Способ оплаты:</label>
+                                <div class="row__radio">
+                                    <input id="pay1" type="radio" name="pay" value="1">
+                                    <label for="pay1">Картой</label>
+                                </div>
+                                <div class="row__radio">
+                                    <input id="pay2" type="radio" name="pay" value="2">
+                                    <label for="pay2">Наличными</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label for="comment">Комментарий к заказу</label>
+                                <div class="row__input">
+                                    <input id="comment" type="text" placeholder=" " autocomplete="off">
+                                    <span>Не обязательно</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label for="promo">Промокод</label>
+                                <div class="row__input">
+                                    <input id="promo" type="text" autocomplete="off" placeholder=" " autocomplete="off">
+                                    <span>Введите промокод</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label for="sdacha">Нужна сдача с</label>
+                                <div class="row__input">
+                                    <input id="sdacha" type="text" autocomplete="off" placeholder=" ">
+                                    <span>С какой суммы?</span>
+                                </div>
+                            </div>
+                            <div class="row row_narezat">
+                                <div class="row__checkbox">
+                                    <input id="narezat" type="checkbox" name="narezat">
+                                    <label for="narezat">Нарезать пироги</label>
+                                </div>
+                            </div>
                         </div>
-                    </li>
-                    <li>
-                        <div>vi132</div>
-                        <div>Сосиска в тесте 124 124124</div>
-                        <div>4</div>
-                        <div>60.00</div>
-                        <div>240.00</div>
-                        <div>
-                            <button class="plus">+</button>
-                            <button class="minus">-</button>
-                            <button class="remove">x</button>
-                        </div>
-                    </li>
-                </ul>
+                        <button class="btn">Заказать еду!</button>
+                    </form>
+                </div>
             </div>
         </div>
         <button class="popup__close"><span>&#10006;</span></button>

@@ -2,6 +2,13 @@
     display: grid;
     grid-template-columns: repeat(3, 32%);
     gap: 20px;
+
+    @media(max-width: 1024px) {
+        grid-template-columns: repeat(2, 49%);
+    }
+    @media(max-width: 580px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .product {
@@ -26,6 +33,10 @@
             width: 100%;
             object-fit: cover;
             height: 100%;
+        }
+
+        @media(max-width: 580px) {
+            height: initial;
         }
     }
     &__title {

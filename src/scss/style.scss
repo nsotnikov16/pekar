@@ -33,17 +33,14 @@ body {
       max-width: 1434px;
     }
 
-    /* @media (max-width: 1750px) {
-      padding: 0 100px;
-    }
-
-    @media (max-width: 1279px) {
+    @media (max-width: 1220px) {
       padding: 0 30px;
     }
 
+ 
     @media (max-width: 767px) {
       padding: 0 15px;
-    } */
+    }
   }
 
   &__title {
@@ -85,6 +82,12 @@ body {
 
 /* Корзина */
 @import "cart";
+
+/* Формы */
+@import 'form';
+
+/* Контакты */
+@import 'contacts';
 
 /* Подвал */
 @import "footer";

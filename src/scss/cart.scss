@@ -3,7 +3,7 @@
     padding: 16px 40px;
     background-color: white;
     border-radius: 10px;
-    max-height: 70vh;
+    max-height: 95vh;
     &__title {
         color: #70544f;
         font-family: "__Circe Bold_5";
@@ -15,11 +15,8 @@
     }
 
     &__list {
-        li {
-            display: grid;
-            grid-template-columns: 64px 261px 61px 89px 115px 31px;
-
-            &.top {
+        &.top {
+            li {
                 border-radius: 4px;
                 background-color: #f7f7f7;
                 > div {
@@ -32,8 +29,15 @@
                 }
                 margin-bottom: 8px;
             }
+            overflow: hidden;
+        }
+        overflow-y: scroll;
+        max-height: 280px;
+        li {
+            display: grid;
+            grid-template-columns: 64px 280px 61px 89px 115px 31px;
 
-            &:nth-child(2) div {
+            &:nth-child(1) div {
                 border-top: 1px solid #e2e2e2;
             }
 
@@ -66,6 +70,17 @@
                 }
             }
         }
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: gray;
+            border-radius: 20px;
+        }
+        &::-webkit-scrollbar-track {
+            background: white;
+        }
     }
 
     .plus {
@@ -79,6 +94,52 @@
     .remove {
         background-color: #c2c2c2;
     }
+
+    &__text {
+        margin-top: 20px;
+        line-height: 22px;
+        font-size: 18px;
+        text-align: center;
+        color: #70544F;
+        font-family: "__Montserrat_5";
+        font-weight: 500;
+    }
+
+    &__step1-btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .btn {
+            width: 238px;
+            height: 50px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        margin: 20px 0; 
+    }
+
+    &__btn-price {
+        background-color: white !important;
+        border: 2px solid $orange !important;
+        color: $orange !important;
+        box-shadow: none !important;
+        margin-right: 15px;
+    }
+
+    &__conditions {
+        display: block;
+        text-align: center;
+        color: #70544F;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+
 }
 .top {
 }

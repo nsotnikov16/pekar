@@ -25,43 +25,24 @@
             &::before {
                 width: 22px;
                 margin-right: 7px;
+                @media(max-width: 580px) {
+                    width: 100%;
+                }
             }
             &::after {
                 width: 100%;
                 margin-left: 7px;
             }
+
+            
+        }
+
+        @media(max-width: 580px) {
+            font-size: 28px;
         }
     }
 
-    @media (max-width: 1280px) {
-        padding: 100px 0;
-    }
-
-    @media (max-width: 1279px) {
-        &__title {
-            font-size: calc(30px + (20 + 20 * 0.7) * ((100vw - 375px) / 1919));
-        }
-    }
-
-    @media (max-width: 1024px) {
-        padding: 70px 0 0;
-        &__title {
-            margin-bottom: 20px;
-        }
-    }
-
-    &_faq {
-        padding-bottom: 90px !important;
-        @media (max-width: 767px) {
-            .section__title {
-                max-width: 320px;
-            }
-        }
-    }
-
-    &_prices {
-        padding-bottom: 91px !important;
-    }
+   
 }
 
 .orange {
