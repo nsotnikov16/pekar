@@ -14,6 +14,22 @@ testWebP(function (support) {
 
 const sensor = !!('ontouchstart' in window)
 
+// Lazyload
+const lazyImages = document.querySelectorAll('img[data-src]')
+if (lazyImages.length > 0) {
+    lazyImages.forEach(img => {
+        function showImg() {
+            const { top } = img.getBoundingClientRect()
+            if (top < window.innerHeight) {
+                img.setAttribute('src', img.dataset.src)
+                document.removeEventListener('scroll', showImg)
+            }
+        }
+        showImg()
+        document.addEventListener('scroll', showImg)
+    })
+}
+
 // Шапка
 const header = document.querySelector('.header')
 const headerContainer = header.querySelector('.header .page__container')
@@ -23,7 +39,7 @@ if (!sensor) {
     headerContainer.addEventListener('mouseleave', () => header.classList.remove('open-menu'))
 } else {
     burger.addEventListener('click', () => header.classList.toggle('open-menu'))
-    if(window.innerWidth <= 820) burger.dataset.pointer = 'header-mobile'
+    if (window.innerWidth <= 820) burger.dataset.pointer = 'header-mobile'
     document.addEventListener('click', ({ target }) => !headerContainer.contains(target) ? header.classList.remove('open-menu') : '')
 }
 
